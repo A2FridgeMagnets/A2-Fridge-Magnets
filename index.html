@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A2 Fridge Magnets | Customized Photo Fridge Magnets in Chennai</title>
+<link rel="icon" type="image/png" href="images/a2 logo.png">
+
+
+    <meta name="description"
+        content="A2 Fridge Magnets - Beautiful customized photo, Square Fridge magnets ,polaroid photos,acrylic frame photo  in Chennai, Tamil Nadu. Order easily through WhatsApp.">
+
+    <meta name="keywords"
+        content="custom fridge magnets Chennai, photo fridge magnets, personalized magnets, customized gifts Chennai, A2 Fridge Magnets">
+
+    <meta name="author" content="A2 Fridge Magnets">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="A2 Fridge Magnets | Turn Your Memories Into Magnets ✨">
+    <meta property="og:description"
+        content="Your favorite moments, beautifully customized into fridge magnets.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Review Popup -->
+<div id="reviewPopup" class="review-popup" >
+  <div class="review-box">
+
+    <button class="close-review" onclick="closeReview()">×</button>
+
+    <div class="stars">★★★★★</div>
+
+    <h3 id="reviewName"></h3>
+
+    <p id="reviewText"></p>
+
+  </div>
+</div>
+
+
+<style>
+.review-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.review-box {
+  position: relative;
+  background: #fffaf5;
+  width: 90%;
+  max-width: 500px;
+  padding: 50px 30px 35px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.stars {
+  color: #d49a3a;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.review-box h3 {
+  margin: 10px 0 15px;
+  color: #4b3025;
+  font-size: 28px;
+}
+
+.review-box p {
+  color: #5c4a42;
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.close-review {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #4b3025;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* REVIEWS GRID */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* REVIEW CARD */
+.review-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 38px 40px;
+    min-height: 390px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(90, 60, 30, 0.10);
+}
+
+
+/* STARS */
+.review-card .stars {
+    color: #c88b24;
+    font-size: 30px;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 45px;
+}
+
+
+/* REVIEW TEXT */
+.review-card .review-text {
+    color: #5c4638;
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0;
+
+    flex-grow: 1;
+}
+
+
+/* CUSTOMER DETAILS */
+.review-card .review-customer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* CUSTOMER INITIAL CIRCLE */
+.review-card .customer-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eadfce;
+    color: #5b4030;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* CUSTOMER NAME */
+.review-card .review-customer h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #49362b;
+}
+
+
+/* CUSTOMER CITY */
+.review-card .review-customer span {
+    font-size: 15px;
+    color: #806f63;
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .review-card {
+        padding: 30px 25px;
+        min-height: 350px;
+    }
+
+    .review-card .review-text {
+        font-size: 18px;
+    }
+}
+.review-customer {
+    margin-top: auto;
+}
+</style>
+
+
+<script>
+const reviews = [
+  {
+    name: " Amar Desai.N from Bengaluru",
+    text: "Very good product and very good finishing.Thank you madam thank you so much.I am satisfy this photos❤️.I'll give u  madam A2fridgemagnets 10 /10 star rating"
+},
+  {
+    name: "Rajvignesh from Tirupur",
+    text: "Awsm mam ,thank you so much🥰🤝Especillay all the pics with photo copies with speciel tag is really awsm touch mam👌👌👌 keep rocking great future ahead 🙏" 
+},
+  {
+    name: "Rakshana from Tenkasi",
+    text: "🥰Thank you so much! I really loved this product and I’m very satisfied with it. Thank you very much for the special gift of the five Polaroids as well. Your service was wonderful!!!😇😇"
+  },
+{
+text:"Thanks for the customised Fridge Magnet! The quality is amazing- the picture is super clear and perfect. Everyone loved the fine detailing. Thank you for the extra photos that you shared as well. Highly recommend definitely worth the price.😊"
+},
+{
+name: "Sowmya Mohan from Chennai",
+text:"Thank you ma'am just now magnets pathan they are lovely 🌹💐🌹 Nan expect pananvey ilayae andha quotes laam rmba happy ah irundhuchu paka rmba thanks 🙏👍❤️❤️"
+} 
+];
+
+function openReview(index) {
+  document.getElementById("reviewName").innerText = reviews[index].name;
+  document.getElementById("reviewText").innerText = reviews[index].text;
+  document.getElementById("reviewPopup").style.display = "flex";
+}
+
+function closeReview() {
+  document.getElementById("reviewPopup").style.display = "none";
+}
+</script>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo"> 
+                <span class="logo-icon">
+<img src="images/a square logo.png" alt="A2 Fridge Magnets">
+</span>
+                <span>
+                    <strong>A2</strong>
+                    <small>Fridge Magnets</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#products">Magnets</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact" class="nav-order">Order Now ✨</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    ✨ Handmade With Love
+                </div>
+
+                <h1>
+                    Turn Your Memories
+                    <span>Into Magnets ✨</span>
+                </h1>
+
+                <p>
+                    Your favorite moments, beautifully customized
+                    into fridge magnets.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn btn-primary whatsapp-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Order on WhatsApp
+                    </a>
+
+                    <a href="#products" class="btn btn-secondary">
+                        View Our Magnets
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+                    <span>📍 Chennai, Tamil Nadu</span>
+                    <span>🧲 2 × 2 Square Magnets</span>
+                </div>
+
+            </div>
+
+
+            <div class="hero-gallery">
+
+                <div class="hero-main-image">
+                    <img src="images/hero.image.png"
+                        alt="Customized A2 Fridge Magnet">
+                </div>
+
+                <div class="floating-card card-one">
+                    💖
+                    <span>Made With Love</span>
+                </div>
+
+                <div class="floating-card card-two">
+                    🎁
+                    <span>Perfect Gift</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section class="section" id="products">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+<h3>OUR COLLECTION</h3>
+</span>
+
+                <h2>
+                    Little Magnets,
+                    <span>Big Memories 💕</span>
+                </h2>
+
+                <p>
+                    Choose your favorite style and make your special
+                    moments unforgettable.
+                </p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- Product 1 -->
+                <article class="product-card product-clickable" data-product="custom-magnet">
+
+                    <div class="product-image">
+                        <img src="images/custom photo.jpg","images/Pokemon magnets.jpg","images/img1.jpg","images/img2.jpg","images/img3.jpg","images/img4.jpg"
+
+                            alt="Photo Fridge Magnets">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="product-icon">📸</span>
+
+                        <h3>Customized Fridge Magnets</h3>
+
+                        <p>
+                            Turn your favorite photos into beautiful personalized fridge magnets, perfect for keeping your special memories close every day.Only Square shape is available.
+                         </p>
+
+                        <a href="#" class="product-btn whatsapp-link">
+                            <h4>Order Now →</h4>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Product 2 -->
+                <article class="product-card product-clickable" data-product="acrylic-magnet">
+
+                    <div class="product-image">
+                        <img src="images/acrylic magnet.jpg","images/img5.jpg","images/img7.jpg","images/img8.jpg"
+                            alt="Acrylic Frame Magnet">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="product-icon">✨</span>
+
+                        <h3>Acrylic Frame Magnet</h3>
+
+                        <p>
+                            Preserve your beautiful memories with elegant acrylic frame magnets, specially customized to make your favorite moments extra special. ✨                        </p>
+
+                        <a href="#" class="product-btn whatsapp-link">
+                            <h4>Order Now →</h4>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Product 3 -->
+                <article class="product-card product-clickable" data-product="acrylic-keychain">
+
+                    <div class="product-image">
+                        <img src="images/photoframe Keychain.jpg","images/img9.jpg","images/img10.jpg"
+                            alt="Acrylic Frame Keychain">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="product-icon">🏷️🔑</span>
+
+                        <h3>Acrylic Frame Keychain</h3>
+
+                        <p>
+                           Carry your favorite memories wherever you go with a cute personalized acrylic frame keychain, perfect for everyday use or gifting. ✨
+                        </p>
+
+                        <a href="#" class="product-btn whatsapp-link">
+                            <h4>Order Now →</h4>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Product 4 -->
+                <article class="product-card product-clickable" data-product="polaroid">
+
+                    <div class="product-image">
+                        <img src="images/polaroid.jpg","images/img11.jpg","images/img12.jpg","images/img13.jpg"
+
+                            alt="Customized Polaroid Photos">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="product-icon">🖼️</span>
+
+                        <h3>Customized Polaroid Photos</h3>
+
+                        <p>
+                            Turn your favorite moments into beautiful Polaroid-style prints, perfect for room décor, memory walls, journaling and thoughtful gifts. ✨📸                        </p>
+
+                        <a href="#" class="product-btn whatsapp-link">
+                            <h4>Order Now →</h4>
+                        </a>
+                    </div>
+
+                </article>
+</div><!-- CLOSE PRODUCT GRID -->
+
+
+                       <!-- ================= WHY CHOOSE US ================= -->
+        <section class="section why-section" id="why-us">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">WHY A2?</span>
+
+                <h2>
+                    Made For Your
+                    <span>Special Moments 💕</span>
+                </h2>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <div class="why-icon">💖</div>
+                    <h3>Fully Customized</h3>
+                    <p>
+                        Your photo, your style, your special memory.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🧲</div>
+                    <h3>Strong Magnetic Back</h3>
+                    <p>
+                        Designed to hold securely on your fridge.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">✨</div>
+                    <h3>Premium Finish</h3>
+                    <p>
+                        Beautifully finished for a neat premium look.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🎁</div>
+                    <h3>Perfect For Gifts</h3>
+                    <p>
+                        A sweet little gift for every special occasion.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="section" id="how-it-works">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">SIMPLE & EASY</span>
+
+                <h2>
+                    How It
+                    <span>Works ✨</span>
+                </h2>
+
+                <p>
+                    From your photo to your personalized magnet
+                    in just a few simple steps.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h3>Choose Your Magnet</h3>
+                        <p>Select your favorite magnet style.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h3>Send Your Photo</h3>
+                        <p>Send your photo through WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div>
+                        <h3>We Customize</h3>
+                        <p>We prepare your personalized design.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div>
+                        <h3>Print & Pack</h3>
+                        <p>Your magnet is carefully prepared and packed.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <div>
+                        <h3>Get It Delivered</h3>
+                        <p>Your special memory reaches your doorstep.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section class="section gallery-section" id="gallery">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">OUR WORK</span>
+
+                <h2>
+                    Made With
+                    <span>Love 💕</span>
+                </h2>
+
+                <p>
+                    Replace these placeholder images with your
+                    beautiful A2 Fridge Magnet photos.
+                </p>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item large">
+                    <img src="images/best review.jpeg" onclick="openReview(0)" style="cursor:pointer;">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/review 4.jpeg" onclick="openReview(1)" style="cursor:pointer;">
+                        alt="A2 Fridge Magnets product photo 2">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/review 6.jpeg" onclick="openReview(2)" style="cursor:pointer;">
+                        alt="A2 Fridge Magnets product photo 3">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/review 7.jpeg" onclick="openReview(3)" style="cursor:pointer;">
+                        alt="A2 Fridge Magnets product photo 4">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/review 5.jpeg" onclick="openReview(4)"style="cursor:pointer;">
+                        alt="A2 Fridge Magnets product photo 5">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CUSTOM CTA ================= -->
+
+        <section class="custom-order" id="contact">
+
+            <div class="cta-decoration">✦</div>
+
+            <div class="cta-content">
+
+                <span class="eyebrow">LET'S CREATE SOMETHING SPECIAL</span>
+
+                <h2>
+                    Have a Special Photo?
+                    <span>Let’s Turn It Into a Magnet! 💙</span>
+                </h2>
+
+                <p>
+                    Send us your favorite photo on WhatsApp and
+                    let's create a beautiful memory together.
+                </p>
+
+                <a href="#" class="btn btn-light whatsapp-link">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Send Your Photo on WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section class="section" id="reviews">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">CUSTOMER LOVE</span>
+
+                <h2>
+                    Happy Customers,
+                    <span>Happy Memories 💕</span>
+                </h2>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <article class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “Hey sis...
+
+Actually the fridge magnet romba romba nalarunchu...en frnds ku romba pidichirunthathuu...rombaa....will give u order for few more... En frnds lam ketanga enga order pota epdi order pota nu...refered ur pages for my frnds...
+
+And that spl gifts🥺made my day! 
+
+Thank u so much!”
+                    </p>
+
+                    <div class="reviewer">
+                        <div class="review-avatar">A</div>
+                        <div>
+                            <strong>Anil Kumar</strong>
+                            <small>Bangalore</small>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “Its very cute sorry for late response..... thank you my friend was very happy”
+                    </p>
+
+                    <div class="reviewer">
+                        <div class="review-avatar">S</div>
+                        <div>
+                            <strong>Kingsly</strong>
+                            <small>Chennai</small>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “Its very cute sorry for late response thank you my friend was very happy.....
+Thank you very much for your wonderful gift....”
+                    </p>
+
+                    <div class="reviewer">
+                        <div class="review-avatar">P</div>
+                        <div>
+                            <strong>Vicent Jeni</strong>
+                            <small>Trichy</small>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+       <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo footer-logo">
+                   <span class="logo-icon">
+<img src="images/a square logo.png" alt="A2 Fridge Magnets">
+</span>
+                    <span>
+                        <strong>A2</strong>
+                        <small>Fridge Magnets</small>
+                    </span>
+                </a>
+
+                <p>
+                    Customized Photo Fridge Magnets
+                </p>
+
+                <p>
+                    📍 Chennai, Tamil Nadu
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#products">Magnets</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Connect With Us</h3>
+
+                <a href="#" class="whatsapp-link">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <a href="https://instagram.com/a2fridgemagnet"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                A2 Fridge Magnets. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with 💕 in Chennai
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+
+    <a href="#"
+        class="floating-whatsapp whatsapp-link"
+        aria-label="Order A2 Fridge Magnets on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <span>Order on WhatsApp</span>
+
+    </a>
+
+
+
+    <!-- ================= PRODUCT DETAILS MODAL ================= -->
+              
+            
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
